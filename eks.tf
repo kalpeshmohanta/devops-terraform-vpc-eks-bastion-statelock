@@ -72,7 +72,7 @@ resource "aws_security_group" "worker_sg" {
 }
 
 
-# Add an inbound rule to the already exist EKS control plane's security group to allow traffic from the Bastion Host
+# Add an inbound rule to the already exist EKS control plane's security group(AWS managed Control Plane) to allow traffic from the Bastion Host
 resource "aws_security_group_rule" "eks_control_plane_ingress" {
   type                     = "ingress"
   from_port                = 443
